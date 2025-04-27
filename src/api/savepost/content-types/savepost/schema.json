@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "saveposts",
+  "info": {
+    "singularName": "savepost",
+    "pluralName": "saveposts",
+    "displayName": "savepost"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "posts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::post.post"
+    }
+  }
+}

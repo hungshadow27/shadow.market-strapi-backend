@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "short_videos",
+  "info": {
+    "singularName": "short-video",
+    "pluralName": "short-videos",
+    "displayName": "ShortVideo"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "video": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "postedBy": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "relatedPost": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::post.post"
+    },
+    "viewsCount": {
+      "type": "integer"
+    }
+  }
+}
